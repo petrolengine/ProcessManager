@@ -79,10 +79,10 @@ int main()
     if (!init_children())
         return -1;
 
-    if (daemon(0, 0) == -1) {
-        syslog(LOG_ERR, "daemon error: %s", strerror(errno));
-        return -1;
-    }
+//    if (daemon(0, 0) == -1) {
+//        syslog(LOG_ERR, "daemon error: %s", strerror(errno));
+//        return -1;
+//    }
 
     for (unsigned int i = 0; i < SIGS_SIZE; i++) {
         Signal(sigs[i]);
